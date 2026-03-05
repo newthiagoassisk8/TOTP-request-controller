@@ -1,42 +1,42 @@
-# Laboratório de Cliente TOTP Personalizado
+# Custom TOTP Client Lab
 
-Este projeto é um laboratório para validar e testar o comportamento do cliente de TOTP personalizado usando Playwright.
-Ele abre a aplicação web de TOTP e pode interceptar a rota da API para simular diferentes cenários de resposta.
+This project is a lab environment to validate and test the behavior of a custom TOTP client using Playwright.
+It opens the TOTP web app and can intercept the API route to simulate different response scenarios.
 
-## Requisitos
+## Requirements
 
 - Node.js 18+
 
-## Instalação
+## Installation
 
 ```bash
 npm install
 npx playwright install chromium
 ```
 
-## Uso
+## Usage
 
-Executa o fluxo padrão (sem mock, consumindo a API real):
+Run the default flow (no mock, using the real API):
 
 ```bash
 npm run scrape
 ```
 
-Também é possível passar um argumento para simular cenários:
+You can also pass an argument to simulate scenarios:
 
 ```bash
-npm run scrape -- <cenario>
+npm run scrape -- <scenario>
 ```
 
-Cenários disponíveis:
+Available scenarios:
 
-- `normal`: não intercepta a API (comportamento real).
-- `empty`: retorna array vazio (`[]`).
-- `manyItems`: retorna uma lista grande de TOTP (2000 itens).
-- `delayed`: retorna payload com atraso de 4 segundos.
-- qualquer outro valor: retorna payload mock com 40 itens.
+- `normal`: does not intercept the API (real behavior).
+- `empty`: returns an empty array (`[]`).
+- `manyItems`: returns a large TOTP list (2000 items).
+- `delayed`: returns a payload with a 4-second delay.
+- any other value: returns a mock payload with 40 items.
 
-Exemplos:
+Examples:
 
 ```bash
 npm run scrape -- empty
@@ -45,7 +45,7 @@ npm run scrape -- delayed
 npm run scrape -- testeLivre
 ```
 
-## Observações
+## Notes
 
-- O script abre o navegador em modo visível (`headless: false`).
-- O Playwright pausa a execução com `page.pause()` para inspeção manual do cenário.
+- The script opens the browser in visible mode (`headless: false`).
+- Playwright pauses execution with `page.pause()` for manual scenario inspection.
