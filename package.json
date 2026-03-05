@@ -1,0 +1,16 @@
+{
+    "name": "TOTP-request-controller",
+    "version": "1.0.0",
+    "description": "Projeto simples de web scraping para explorar o uso do Playwright",
+    "main": "src/scrape.js",
+    "scripts": {
+        "scrape": "node src/scrape.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "playwright": "^1.58.2"
+    }
+}
