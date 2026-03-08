@@ -3,6 +3,11 @@
 This project is a lab environment to validate and test the behavior of a custom TOTP client using Playwright.
 It opens the TOTP web app and can intercept the API route to simulate different response scenarios.
 
+## Videos
+
+- Portuguese video explaining the project idea: https://www.youtube.com/shorts/EsEgtpxXzIQ
+- English video explaining the idea and what this repository is for: https://www.youtube.com/shorts/greFPDed_eA
+
 ## Requirements
 
 - Node.js 18+
